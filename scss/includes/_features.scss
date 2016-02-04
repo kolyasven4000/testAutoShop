@@ -1,0 +1,238 @@
+.table {
+    display: table;
+    width: 100%;
+    background: $table-bg;
+    
+}
+
+.row {
+	position: relative;
+	padding: 20px;
+    border-top: 1px solid darken($table-bg, 7%);
+}
+.table-header{
+	display: none;
+}
+.cell {
+width: 60%; 
+}
+//блоки с ценой и баттоном прижаты к правому краю
+.cell:nth-child(4){
+	position: absolute;
+
+	right:20px;
+	top: 20px;
+
+	text-align: right;
+}
+.cell:nth-child(5){
+	position: absolute;
+	//top: 0;
+	right:20px;
+	bottom: 20px;
+	text-align: right;
+}
+
+.features__item_description{
+	margin-bottom: 20px;
+	padding-right: 20px;
+}
+
+.bonus-wrap{
+	display: block;
+	margin:0;
+	padding:0;
+	padding: 19px 0 9px;
+}
+.description__bonus{
+	display: none;
+	color: #8b9497;
+	font-size: $font-size-mini;
+	font-weight: $font-weight-light;
+}
+.button{
+	padding: 0;
+	margin: 0;
+	padding: $button-padding;
+
+	font-family: $button-font-family;
+	font-weight: $button-font-weight;
+	font-size: $button-font-size;
+
+	color: $button-font-color;
+	background-color: transparent;
+	
+	
+	border: transparent;
+	border-radius: 18px;
+	&:hover{
+		background-color: $button-bg;
+		color: $button-font-color-hover;
+	}
+}
+
+
+
+
+
+//круги
+.circle{
+	display: block;
+	position: relative;
+}
+.circle-black::before{
+@include circle($dark-blue, -2px, 55%);
+}
+.circle-white::before{
+@include circle($white, -2px, 55%);
+border: 1px solid $table-circle-gray;
+}
+.circle-gray::before{
+@include circle($table-circle-gray, -2px, 55%);
+}
+.circle-pink::before{
+@include circle($table-circle-pink, -2px, 55%);
+}
+.circle-green::before{
+@include circle($table-circle-green, -2px, 55%);
+}
+.table-title{
+	display: none;
+}
+
+@media(min-width: 768px) {
+.main-contant{
+	max-width: 948px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+.table{
+	margin-bottom: 60px;
+}
+.table-header{
+	display: table-row;
+}
+.cell {
+	vertical-align: middle;
+	width: 15%;
+	padding: 9px 0px;
+    display: table-cell;
+}
+.cell:first-child{
+	width: 40%;
+}
+//возвращаю в поток блок с ценой  и баттон
+.cell:nth-child(4){
+	position: static;
+	text-align: center;
+	vertical-align: top;
+}
+.cell:nth-child(5){
+	position: static;
+	text-align: center;
+	vertical-align: middle;
+}
+//бордеры у всех, кроме последней строки
+.row{
+	display: table-row;
+    &:not(:last-child){
+    	box-shadow: 0px -1px 0px  darken($table-bg, 7%) inset;
+    }
+}
+//паддинг у ячеек слева
+.row > .cell:first-child{
+	padding-left: 13px;
+	height: 40px;
+}
+.table-header{
+	display: table-row;
+}
+
+// circle
+.circle-black::before{
+@include circle($black, 25px, 50%);
+}
+.circle-white::before{
+@include circle($white, 25px, 50%);
+border: 1px solid $table-circle-gray;
+}
+.circle-gray::before{
+@include circle($table-circle-gray, 25px, 50%);
+}
+.circle-pink::before{
+@include circle($table-circle-pink, 25px, 50%);
+}
+.circle-green::before{
+@include circle($table-circle-green, 25px, 50%);
+}
+// circle end
+
+.description__bonus{
+	display: block;
+	padding-right: 10%;
+}
+
+.table-header > .cell{
+
+font-size: 15px;
+color: $table-font-color;
+padding: 15px 0px;
+p{
+	font-weight: 500;
+}
+
+background-color: darken($table-bg, 13%);
+&:first-child{
+padding-left: 13px;
+border-top-left-radius: 5px;
+}
+&:last-child{
+border-top-right-radius: 5px;
+}
+}
+.features__item_description{
+	margin-bottom: 0;
+}
+.button{
+	background-color: $button-bg;
+	color: $white;
+}
+//треугольник рядом с ценой
+.price-triangle{
+position: relative;
+color: inherit;
+
+border-bottom: 1px dashed $table-font-color;
+
+&::after{
+content: "";
+display: block;
+position: absolute;
+
+width:0;
+height:0;
+
+top:7px;
+left: -15px;
+
+border-right: 5px solid transparent;
+border-bottom:5px solid transparent;
+border-top: 5px solid black;
+border-left: 5px solid transparent;
+}
+}
+.table-title{
+	position: relative;
+	display: block;
+
+	font-size: $table-title-font-size;
+	font-weight: $table-title-font-weight;
+	line-height: $table-title-line-height;
+	padding-left: 12px;
+	color:$table-title-font-color;
+
+	border-left: 3px solid gray;
+	text-transform: uppercase;
+}
+
+}

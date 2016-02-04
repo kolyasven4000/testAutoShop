@@ -1,0 +1,37 @@
+body {
+	  margin:0;
+  	padding:0;
+  	width: 100%;
+
+  font: {
+    family: $font-family;
+    size: $font-size-medium;
+    weight: $font-weight;
+  }
+   line-height: $line-height-medium;
+
+}
+.container{
+
+  margin:0 auto;
+  padding: 0 $main-padding;
+  @media(min-width: 768px) {
+    max-width: 948px;
+    padding: 0 16px;
+  }
+  }
+
+.clearfix::after{
+  display: table;
+  content: "";
+  clear: both;
+}
+p{
+	margin: 0;
+	padding: 0;
+	font-size: $font-size-medium;
+	font-weight: $font-weight-light;
+	line-height: $line-height-medium;
+	color: $dark-blue;
+}
+

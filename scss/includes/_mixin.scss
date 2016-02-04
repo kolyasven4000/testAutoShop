@@ -1,0 +1,27 @@
+@mixin arrow($deg, $top, $right){
+
+	position: absolute;
+	content: "";
+
+	width: 10px; 
+	height: 10px;
+	top: $top;
+	right: $right;
+	border-left: 4px solid $white;
+    border-bottom: 4px solid $white;
+    transform: rotate($deg);
+}
+@mixin circle($color, $top, $right) {
+	position: absolute;
+	content: "";
+	height: 20px;
+	width: 20px;
+
+	top: $top;
+	right: $right;	
+
+	margin-right: -10px;
+
+	background-color: $color;
+	border-radius: 50%;
+}

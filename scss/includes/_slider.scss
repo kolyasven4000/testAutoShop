@@ -1,0 +1,155 @@
+.slider-wrapper{
+	display: none;
+}
+@media(min-width:1160px) { 
+.slider-wrapper{
+display: block;
+margin:60px auto;
+width:1140px;
+height: 561px;
+
+background: red;
+background:rgba(7,7,7, .9);
+
+}
+.slider{
+	position: relative;
+	width:1140px;
+	height: 561px;
+
+}
+//slide animation
+@keyframes pulse{
+  0% {
+    
+    opacity: 0;
+  }
+  100% {
+    
+    opacity: 1;
+  }
+}
+.slider__title {
+	position: absolute;
+	right: 35px;
+	bottom: 25px;
+	h1 {
+		font-size: 41px;
+		font-weight: $font-weight;
+		font-family: $font-family-slider;
+		color: $white;
+		text-transform: uppercase;
+	}
+}
+.slide {
+	position: absolute;
+	width:100%;
+	height:100%;
+
+	font-family: $font-family-slider;
+	overflow:hidden;
+	animation: pulse 0.8s ;
+	img{
+		opacity: 0.2;	
+	}
+}
+.slide-hidden {
+	display: none;
+}
+
+.slide__product {
+	position: absolute;
+	top: 120px;
+	right: 280px;
+	width:220px;
+	z-index:2;
+}
+
+.slide__product_content {
+	display: none;
+}
+.show{
+	display: block;
+}
+.slide__product_content p {
+	
+	font-size: $font-size-slider-content;
+	line-height: $line-height-slider-content;
+	color: $white;
+	font-weight: $font-weight;
+}
+.slide__product_link {
+	color: $slider-link;
+	font-size: 15px;
+	line-height: 30px;
+
+	&:hover{
+		border-bottom: 1px solid $slider-link;
+	}
+}
+
+//крестик в круге
+.slide__product_button {
+	position: absolute;
+	display: block;
+	background-color: $white;
+	width: 40px;
+	height: 40px;
+
+	top: -10px;
+	left: -55px;
+	border-radius: 50%;
+	&::before, &::after {
+		content: "";
+		position: absolute;
+		width: 21px;
+		height:1px;
+
+		top: 50%;
+		left: 50%;
+
+		margin-left: -11.5px;
+
+		background-color: $slider-link;
+	}
+
+	&::after {
+		transform: rotate(90deg);
+	}
+	&:hover::before, &:hover::after {
+		background-color: $slider-button-hover;
+	}
+}
+
+.slider__arrow {
+	position: absolute;
+	display: block;
+	
+     height: 32px;
+     width: 20px;
+     top: 280px;
+
+      margin-top: -16px;
+	}
+	.slider__arrow-left {
+		left:40px;
+		&::before{
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-top: 3px solid white;
+        border-left: 3px solid white;
+        transform: rotate(-45deg);
+    }
+	}
+	.slider__arrow-right{
+	
+      right:40px;
+    &::before{
+        @extend .slider__arrow-left::before;
+        transform: rotate(135deg);
+    		}
+  		
+	}
+}

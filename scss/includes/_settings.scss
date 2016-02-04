@@ -1,0 +1,84 @@
+//color
+$dark-blue: #282d30;
+$white: #fff;
+$black: #000;
+//typography
+$font-family: 'Roboto', sans-serif;
+
+$font-size-mini: 13px;
+$font-size-medium: 14px;
+$font-size-large: 15px;
+
+$line-height-mini: 15px;
+$line-height-medium: 16px;
+$line-height-large: 17px;
+
+
+$font-weight: 400;
+$font-weight-light: 300;
+$font-weight-bold: 700;
+
+$font-color: $dark-blue;
+
+$main-padding: 20px;
+
+//header-------------------
+$header-bg: $dark-blue;
+$menu-font-size: 16px;
+$menu-line-height: 18px;
+$menu-font-weight: $font-weight-bold;
+
+$menu-item-bg-hover:#00aeef;
+
+$sub-menu-font-size: 14px;
+$sub-menu-font-weight: $font-weight;
+$sub-menu-line-height: 16px;
+$sub-menu-bg: #383d40;
+
+
+//slider--------------------
+$font-family-slider: 'Arial', sans-serif;
+$font-size-slider-content: 20px;
+$line-height-slider-content: 30px;
+
+$slider-link: #00aeef;
+
+$slider-button-hover: #e3343d;
+
+///table--------------
+//color
+$table-font-weight: $font-weight-light;
+$table-font-color: $font-color;
+
+$table-bonus-font-color: #8b9497;
+$table-bg: #f5f6f6;
+
+$table-circle-gray: #cbcbcc;
+$table-circle-pink: #d74345;
+$table-circle-green: #88c504;
+
+$table-title-font-size: 20px;
+$table-title-line-height: 22px;
+$table-title-font-color: $table-font-color;
+$table-title-font-weight: $font-weight-bold;
+
+
+
+
+//button
+$button-font-family: $font-family;
+$button-font-size: $font-size-medium;
+$button-font-weight: $font-weight-light;
+
+$button-padding: 6px 14px;
+$button-font-color: #8b9497;
+$button-font-color-hover: $white;
+$button-bg: $header-bg;
+
+//footer
+$footer-font-size: 11px;
+$footer-line-height: 13px;
+$footer-font-color: $white;
+$footer-bg: $header-bg;
+
+
